@@ -1,10 +1,13 @@
-def celsius_to_fahrenheit(celsius):
+def celsius_to_fahrenheit(celsius:int)-> float:
+    """This function will Convert the temperature from celsuis to fahrenheit."""
     return (celsius * 9/5) + 32
 
-def fahrenheit_to_celsius(fahrenheit):
+def fahrenheit_to_celsius(fahrenheit:int)-> float:
+    """This function will Convert the temperature from fahrenheit to celsuis."""
     return (fahrenheit - 32) * 5/9
 
 def main():
+    """This function will raise exeptions and warn the user of the error."""
     while True:
         try:
             Input = input("Enter the temerature follwoed by measuring unit:")
