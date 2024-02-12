@@ -9,20 +9,24 @@ def fahrenheit_to_celsius(fahrenheit):
 
 def main ():
     
-    uservalue=int(input("Enter a temperature"))
-    userunit=str(input("Enter its unit (e.g., 25 C or 77 F"))
+  
+    try:
+         uservalue=int(input("Enter a temperature : "))
+         userunit=str(input("Enter its unit , C or F : "))
 
-    if userunit == "c" or userunit == "C" :
-        c=celsius_to_fahrenheit(round(uservalue))
-        print(c)
+         if userunit == "c" or userunit == "C" :
+          c=celsius_to_fahrenheit(uservalue)
+          print(round(c))
+ 
+         elif userunit == "F" or userunit == "f" :
+          m=fahrenheit_to_celsius(uservalue)
+          print(round(m))
+    except ValueError:
+       print("invalid number please try again")
+    except TypeError as r:
+       print(r.__class__,"please try again")
+    else:
+       print("Conversion completed successfully ^_^ ")
 
-    elif userunit == "F" or userunit == "f" :
-        m=fahrenheit_to_celsius(round(uservalue))
-        print(m)
 
-try:
- main()
-except ValueError:
-    print("invalid number please try again",main())
-except TypeError as r:
-    print(r.__class__,"please try again",main())
+main()
