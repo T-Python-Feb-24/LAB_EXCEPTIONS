@@ -6,16 +6,17 @@ Find what type of exception is raised.
    - if operation fails, handle the specific exception that is raised , and print a relevant message.
 '''
 
-try:
-    def additoin(x, y):
+
+def additoin(x, y):
         x = 10
         y = 20
-        print("Addition:", x + y)
+        print("Addition:", x + b)
 
+try:
     additoin(10, 20)
 
-except NameError:
-    print("An error occurred")
+except NameError as ne:
+    print("An error occurred: ", ne)
 except Exception as e:
     print(e.__class__)
 else:
