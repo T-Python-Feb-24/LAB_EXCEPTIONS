@@ -22,14 +22,14 @@ def main() -> None:
             temperature: str = input(
                 "Enter a temperature and its unit (e.g., \"25 C\" or \"77 F\"): ")
             if pattern.match(temperature):
-                temperature = temperature.split(" ")
-                match temperature[-1]:
+                temper, unit = temperature.split(" ")
+                match unit:
                     case "C":
-                        celsius: float = float((temperature[0]))
-                        print(f"""{green}Temperature in Fahrenheit:
-{celsius_to_fahrenheit(celsius)} F""", end=defcolor)
+                        celsius: float = float((temper))
+                        print(f"""{green}Temperature in Fahrenheit: \
+{celsius_to_fahrenheit(celsius)} F""", end=defcolor+"\n")
                     case "F":
-                        fahrenheit: float = float(temperature[0])
+                        fahrenheit: float = float(temper)
                         print(f"""{green}Temperature in Celsius: \
 {fahrenheit_to_celsius(fahrenheit)} C""", end=defcolor+"\n")
                     case "q":
