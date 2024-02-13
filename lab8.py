@@ -6,12 +6,11 @@ def addition(x, y):
 
 try:
     addition(10, 20)
-    print("The operation is successful")
 except NameError:
     print("The name is error")
 except Exception as e:
     print(e.__class__)
-
-
+else:
+    print("The operation is successful")
 
 
