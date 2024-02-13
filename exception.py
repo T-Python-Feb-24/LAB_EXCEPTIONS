@@ -6,9 +6,10 @@ def additoin(x, y):
 
 # additoin(10, 20)
 
-
 try:
     additoin(10 , 20)
-    print("the operation is successful")
 except NameError:
-    print("Please try a valid value ")
+    print("b is not defined")
+else:
+    print("The operation is successful")
+
