@@ -29,6 +29,9 @@ def main():
             print("Invalid temperature value. Please try again.")
         except TypeError as e:
             print(e)
+        else:
+            print("successful")
+            
 
 if __name__ == "_main_":
     main()
